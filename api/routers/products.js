@@ -29,3 +29,15 @@ const upload = multer({
     },
     fileFilter: fileFilter
 });
+
+router.get('/', ProductsController.products_get_all);
+
+router.post('/', checkAuth, upload.single('productImage'), ProductsController.products_create);
+
+router.get('/:productId', ProductsController.products_get_one);
+
+router.patch('/:productId', checkAuth, ProductsController.products_update);
+
+router.delete('/:productId', checkAuth, ProductsController.products_delete);
+
+module.exports = router;
