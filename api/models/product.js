@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// incorporating product image to identify product
 
 const productSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
