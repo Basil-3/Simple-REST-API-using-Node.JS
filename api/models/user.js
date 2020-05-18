@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//using regex for email authorization
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     email: {type: String, 
